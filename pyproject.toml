@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "preference-elicitation"
+version = "0.1.0"
+description = "Multi-method study of descriptive and prescriptive anchors in LLM self-reports."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+api = ["openai>=1.68"]
+
+[project.scripts]
+preference-elicitation = "preference_elicitation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

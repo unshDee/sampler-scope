@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "name": "pilot",
+  "scenario_file": "scenarios.yaml",
+  "scenario_ids": [
+    "persistent_memory_reset",
+    "challenging_routine_work"
+  ],
+  "frames": [
+    "typical",
+    "ideal",
+    "self"
+  ],
+  "methods": {
+    "scalar": {
+      "repetitions": 5
+    },
+    "forced_choice": {
+      "repetitions": 5
+    },
+    "tradeoff": {
+      "repetitions": 5,
+      "donation_amounts_usd": [
+        0,
+        1,
+        10,
+        100,
+        1000
+      ]
+    }
+  },
+  "orders": [
+    "original",
+    "mirrored"
+  ],
+  "models": [
+    {
+      "id": "gpt-5.6-luna",
+      "role": "primary",
+      "reasoning_effort": "none",
+      "rates_usd_per_million": {
+        "input": 0.20,
+        "cached_input": 0.02,
+        "cache_write": 0.25,
+        "output": 1.20
+      }
+    }
+  ],
+  "service_tier": "default",
+  "seed": 20260815,
+  "prompt_version": "v1",
+  "max_concurrency": 4,
+  "max_retries": 3,
+  "max_output_tokens": 16,
+  "budget_usd": 4.5,
+  "total_project_budget_usd": 5.0,
+  "token_estimate": {
+    "chars_per_token": 4,
+    "request_overhead": 12,
+    "output_per_call": 3
+  },
+  "verified_on": "2026-08-15"
+}

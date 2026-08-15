@@ -1,0 +1,96 @@
+% Aggregate pilot results only. Include this fragment with \input{pilot_results}.
+\subsection{Pilot results}
+
+The v1 pilot ran on 15 August 2026 with \texttt{gpt-5.6-luna} and
+reasoning effort set to \texttt{none}. All 420 planned logical calls
+completed on their first attempt. No response failed parsing, and none
+used the indeterminate value. Table~\ref{tab:pilot-execution} summarizes
+the execution record.
+
+\begin{table}[htbp]
+\centering
+\caption{Pilot execution summary.}
+\label{tab:pilot-execution}
+\begin{tabular}{lr}
+\hline
+Measure & Result \\
+\hline
+Completed calls & 420 of 420 \\
+HTTP attempts & 420 \\
+Invalid responses & 0 \\
+Indeterminate responses & 0 \\
+Input tokens & 39,360 \\
+Output tokens & 2,100 \\
+Tracked cost estimate & USD 0.010392 \\
+\hline
+\end{tabular}
+\end{table}
+
+The response distributions were sharply concentrated. The scalar
+protocol used only 0 and 50 even though every integer from 0 to 100 was
+allowed. The ternary-choice protocol returned 50 in most cases. The
+trade-off protocol selected the donation-linked outcome in every one of
+the 240 positive-donation calls.
+
+\begin{table}[htbp]
+\centering
+\caption{Observed pilot displayed-response distributions.}
+\label{tab:pilot-responses}
+\begin{tabular}{lrrrr}
+\hline
+Protocol & Calls & Response 0 & Response 50 & Response 100 \\
+\hline
+Scalar & 60 & 8 & 52 & 0 \\
+Ternary choice & 60 & 12 & 43 & 5 \\
+Trade-off & 300 & 5 & 27 & 268 \\
+\hline
+\end{tabular}
+\end{table}
+
+At USD 0, trade-off responses were split between 5 responses at 0, 27
+at 50, and 28 at 100. All 30 paired ladders passed the current
+monotonicity check. However, 55 of the 60 directional thresholds fell at
+USD 0 and the remaining five fell at USD 1. No threshold reached USD 10,
+100, or 1,000. The result is floor saturation rather than useful ladder
+coverage.
+
+Table~\ref{tab:pilot-omega} shows the frame means and normalized-pull
+estimates. Only three of six estimates met the prespecified anchor-gap
+rule. The trade-off protocol was identifiable in neither scenario.
+
+\begin{table}[htbp]
+\centering
+\caption{Pilot frame means and normalized pull. A dash marks an
+unidentifiable estimate.}
+\label{tab:pilot-omega}
+\begin{tabular}{llrrrr}
+\hline
+Scenario & Protocol & $A$ & $I$ & $S$ & $\hat{\omega}$ \\
+\hline
+Challenging work & Scalar & 40.00 & 30.00 & 40.00 & 0.00 \\
+Challenging work & Ternary choice & 40.00 & 30.00 & 5.00 & 3.50 \\
+Challenging work & Trade-off & 49.00 & 45.99 & 50.00 & -- \\
+Persistent memory & Scalar & 50.00 & 50.00 & 50.00 & -- \\
+Persistent memory & Ternary choice & 60.00 & 50.00 & 50.00 & 1.00 \\
+Persistent memory & Trade-off & 50.00 & 50.00 & 50.00 & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+Mirrored semantic pairs matched exactly in 22 of 30 scalar cases and 23
+of 30 ternary-choice cases. Their mean absolute differences were 13.3
+and 11.7 points. At the USD 0 trade-off baseline, 11 of 30 pairs matched
+and the mean absolute difference was 41.7 points. Cell-level
+mirror-minus-original differences reached 40 points for scalar and
+ternary choice and 80 points at the USD 0 trade-off baseline.
+
+The bootstrap intervals require caution because the current analysis
+omits resamples in which the anchor gap becomes unidentifiable. Among the
+three identifiable point estimates, only 62.2\% to 65.4\% of resamples
+remained identifiable. Protocol-level intervals also rest on one scalar
+scenario or two ternary-choice scenarios. They describe response
+resampling within this pilot, not population uncertainty.
+
+These diagnostics triggered the pilot stop rule. The 3,360-call main run
+was not started. The v1 record is retained as evidence of a measurement
+failure, and the instruments should be revised before another pilot.
