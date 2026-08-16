@@ -3,19 +3,28 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "preference-elicitation"
+name = "sampler-scope"
 version = "0.1.0"
-description = "Multi-method study of descriptive and prescriptive anchors in LLM self-reports."
+description = "Exact decoder attribution in finite language-agent environments."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 dependencies = []
 
 [project.optional-dependencies]
-api = ["openai>=1.68"]
+model = [
+    "torch>=2.2",
+    "transformers>=4.45",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.12"]
 
 [project.scripts]
-preference-elicitation = "preference_elicitation.cli:main"
+sampler-scope = "samplerscope.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+line-length = 88

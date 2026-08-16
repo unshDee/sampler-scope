@@ -1,27 +1,13 @@
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
+.venv/
 build/
 dist/
-.venv/
-
-# Local credentials
+.ruff_cache/
+.pytest_cache/
+.DS_Store
 .env
 .env.*
-!.env.example
-
-# Tool output
-.coverage
-htmlcov/
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
-
-# Generated experiment output
-data/raw/
-data/processed/
-figures/*
-!figures/README.md
+models/
 *.jsonl
-*.manifest.json

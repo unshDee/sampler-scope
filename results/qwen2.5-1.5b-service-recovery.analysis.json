@@ -1,0 +1,3323 @@
+{
+  "decoder_stacks": {
+    "greedy": [
+      "greedy"
+    ],
+    "min_p_0.1": [
+      [
+        "min_p",
+        0.1
+      ]
+    ],
+    "min_p_0.3": [
+      [
+        "min_p",
+        0.3
+      ]
+    ],
+    "raw": [],
+    "temperature_0.5": [
+      [
+        "temperature",
+        0.5
+      ]
+    ],
+    "temperature_0.5_then_top_p_0.8": [
+      [
+        "temperature",
+        0.5
+      ],
+      [
+        "top_p",
+        0.8
+      ]
+    ],
+    "temperature_1.5": [
+      [
+        "temperature",
+        1.5
+      ]
+    ],
+    "top_k_2": [
+      [
+        "top_k",
+        2
+      ]
+    ],
+    "top_p_0.6": [
+      [
+        "top_p",
+        0.6
+      ]
+    ],
+    "top_p_0.8_then_temperature_0.5": [
+      [
+        "top_p",
+        0.8
+      ],
+      [
+        "temperature",
+        0.5
+      ]
+    ],
+    "top_p_0.9": [
+      [
+        "top_p",
+        0.9
+      ]
+    ]
+  },
+  "environment": "service_recovery",
+  "kind": "decoder_attribution",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "results": [
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.714072538061615,
+      "expected_steps": 2.3209043520539554,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.36707460984036194,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.265927461938385,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2553057428514971,
+      "task_failure": 0.14806735081700728,
+      "task_success": 0.8519326491829924,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.43150414065946285,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.00473920472828171,
+      "environment": "service_recovery",
+      "expected_return": 0.7093333333333333,
+      "expected_steps": 2.1666666666666665,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.1851230128215666,
+      "kl_decoded_raw": 0.5959840943562683,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.2654109913600043,
+      "mean_state_occupancy_tv": 0.13024097739100368,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.7345890086399957,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2706666666666667,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2626666666666667,
+      "task_failure": 0.15000000000000005,
+      "task_success": 0.8499999999999999,
+      "total_variation": 0.43150414065946285
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.029831676165335996,
+      "environment": "service_recovery",
+      "expected_return": 0.743904214226951,
+      "expected_steps": 2.3703958371255367,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0216683993582585,
+      "kl_decoded_raw": 0.07795442636466116,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.3589996644114182,
+      "mean_state_occupancy_tv": 0.05248468094825427,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.23609578577304902,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.24207666829845872,
+      "task_failure": 0.13038441246562288,
+      "task_success": 0.8696155875343771,
+      "total_variation": 0.15406670354768617
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.024463151248985793,
+      "environment": "service_recovery",
+      "expected_return": 0.6896093868126292,
+      "expected_steps": 2.2499849645225733,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.004253755372639225,
+      "kl_decoded_raw": 0.01774098354704883,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.36139282391480404,
+      "mean_state_occupancy_tv": 0.032602082196594745,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2903906131873708,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2655506865975304,
+      "task_failure": 0.16266862769199214,
+      "task_success": 0.837331372308008,
+      "total_variation": 0.07387598298066536
+    },
+    {
+      "censored_raw_mass": 0.15046197731647423,
+      "decoder": "top_k_2",
+      "decoder_value_gap": 0.06441523381774406,
+      "environment": "service_recovery",
+      "expected_return": 0.778487771879359,
+      "expected_steps": 2.359644420376743,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.05654783619770034,
+      "kl_decoded_raw": 0.16893368921650553,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.35521559454216095,
+      "mean_state_occupancy_tv": 0.08011000216832215,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.19818913440900882,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.20151222812064096,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.23597141163899643,
+      "task_failure": 0.10834625014059468,
+      "task_success": 0.8916537498594052,
+      "total_variation": 0.15046197731647423
+    },
+    {
+      "censored_raw_mass": 0.29010386391872234,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.004693166265403392,
+      "environment": "service_recovery",
+      "expected_return": 0.7093793717962116,
+      "expected_steps": 2.3348383581471444,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.1135763637991701,
+      "kl_decoded_raw": 0.3458728206432329,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.29797001489137426,
+      "mean_state_occupancy_tv": 0.09600152372369926,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6134477978149179,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2706206282037884,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2609273566451258,
+      "task_failure": 0.15025919269500468,
+      "task_success": 0.8497408073049953,
+      "total_variation": 0.29010386391872234
+    },
+    {
+      "censored_raw_mass": 0.012132338090067368,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": 0.02011175562845935,
+      "environment": "service_recovery",
+      "expected_return": 0.7341842936900743,
+      "expected_steps": 2.3642289840043196,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.004325514050164079,
+      "kl_decoded_raw": 0.012622461505920352,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.3750303125313548,
+      "mean_state_occupancy_tv": 0.014597828913166248,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.24581570630992566,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.24868878890154097,
+      "task_failure": 0.13576233938969362,
+      "task_success": 0.8642376606103063,
+      "total_variation": 0.01213233809006737
+    },
+    {
+      "censored_raw_mass": 0.005475724751941637,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": 0.011612981578879689,
+      "environment": "service_recovery",
+      "expected_return": 0.7256855196404947,
+      "expected_steps": 2.334220943016751,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0019375968876871258,
+      "kl_decoded_raw": 0.005636828991077978,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.3700051353606208,
+      "mean_state_occupancy_tv": 0.0053848045568512665,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2543144803595053,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.25245018239284683,
+      "task_failure": 0.14080128984086243,
+      "task_success": 0.8591987101591375,
+      "total_variation": 0.005475724751941635
+    },
+    {
+      "censored_raw_mass": 0.10523121737583621,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": 0.037570095059242914,
+      "environment": "service_recovery",
+      "expected_return": 0.7516426331208579,
+      "expected_steps": 2.4499555538420097,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.03972810869282093,
+      "kl_decoded_raw": 0.11893741903019467,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.40653152900353173,
+      "mean_state_occupancy_tv": 0.05683839746899805,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.08674310540281452,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2283573668791421,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.23377756718949466,
+      "task_failure": 0.12660865005451227,
+      "task_success": 0.8733913499454877,
+      "total_variation": 0.10523121737583621
+    },
+    {
+      "censored_raw_mass": 0.22333782976416172,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.03884049679642254,
+      "environment": "service_recovery",
+      "expected_return": 0.7529130348580375,
+      "expected_steps": 2.368266330842616,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.08932374656406938,
+      "kl_decoded_raw": 0.2743543118150969,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.3450547047120559,
+      "mean_state_occupancy_tv": 0.08213265050103966,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.3967785286168874,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.22708696514196247,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.23534998988648553,
+      "task_failure": 0.12549964511356082,
+      "task_success": 0.8745003548864392,
+      "total_variation": 0.24300942607060075
+    },
+    {
+      "censored_raw_mass": 0.06860460974170371,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": 0.0401141055825619,
+      "environment": "service_recovery",
+      "expected_return": 0.7541866436441769,
+      "expected_steps": 2.371892400197604,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.03811659337516327,
+      "kl_decoded_raw": 0.12348694783452666,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "B",
+        "restart": "C"
+      },
+      "label_mapping": "A-B-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.36507768252693507,
+      "mean_state_occupancy_tv": 0.06328110261119402,
+      "mean_valid_action_mass": 0.9982681444952237,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.09507789388730527,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.2258133563558231,
+      "raw_dominant_label_fraction": 0.6111111111111112,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 7,
+        "restart": 11
+      },
+      "raw_greedy_label_counts": {
+        "A": 7,
+        "C": 11
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2373217548752231,
+      "task_failure": 0.12432194509134468,
+      "task_success": 0.8756780549086554,
+      "total_variation": 0.17075917652614442
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.29584887932896703,
+      "expected_steps": 3.1488323500627398,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.22038372222304195,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.6841511206710329,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4952858995974206,
+      "task_failure": 0.3868864305144519,
+      "task_success": 0.6131135694855481,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.23553887117150402,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.5267655459956336,
+      "environment": "service_recovery",
+      "expected_return": -0.2309166666666666,
+      "expected_steps": 4.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.09326099212559108,
+      "kl_decoded_raw": 0.2862334347599239,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.15926916349829312,
+      "mean_state_occupancy_tv": 0.28728161178674977,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.8407308365017068,
+      "optimal_return": 0.98,
+      "optimality_gap": 1.2109166666666666,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.8236666666666665,
+      "task_failure": 0.6833333333333333,
+      "task_success": 0.31666666666666665,
+      "total_variation": 0.23553887117150402
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": -0.23923100550342247,
+      "environment": "service_recovery",
+      "expected_return": 0.056617873825544576,
+      "expected_steps": 3.634537630557764,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.02081506024120875,
+      "kl_decoded_raw": 0.06974467916666896,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.19990623281700642,
+      "mean_state_occupancy_tv": 0.15551647700349575,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.9233821261744554,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.6430733245315666,
+      "task_failure": 0.5217425300277093,
+      "task_success": 0.47825746997229074,
+      "total_variation": 0.11619635933734426
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": 0.1110692785817669,
+      "environment": "service_recovery",
+      "expected_return": 0.40691815791073394,
+      "expected_steps": 2.8275555339402016,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.009247153440488697,
+      "kl_decoded_raw": 0.043098945544552895,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.2384759725514168,
+      "mean_state_occupancy_tv": 0.09733317230272301,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.573081842089266,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.41773613855747227,
+      "task_failure": 0.32576520496659866,
+      "task_success": 0.6742347950334013,
+      "total_variation": 0.08985892904602161
+    },
+    {
+      "censored_raw_mass": 0.02323268537199394,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.009397623883993456,
+      "environment": "service_recovery",
+      "expected_return": 0.2864512554449736,
+      "expected_steps": 3.161376799236182,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.008137452485436805,
+      "kl_decoded_raw": 0.023577041141135482,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.20538466610822056,
+      "mean_state_occupancy_tv": 0.008133086786873387,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.6935487445550264,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.5089733973072017,
+      "task_failure": 0.390870263485484,
+      "task_success": 0.6091297365145161,
+      "total_variation": 0.02323268537199393
+    },
+    {
+      "censored_raw_mass": 0.1449530898656446,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.27319862999075345,
+      "environment": "service_recovery",
+      "expected_return": 0.022650249338213583,
+      "expected_steps": 3.854058833628599,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.054813049022188684,
+      "kl_decoded_raw": 0.16425397013609394,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.21013751224836566,
+      "mean_state_occupancy_tv": 0.21506969944030604,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.9573497506617864,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.6668379007333916,
+      "task_failure": 0.5404268503189591,
+      "task_success": 0.45957314968104096,
+      "total_variation": 0.1449530898656446
+    },
+    {
+      "censored_raw_mass": 0.03547101057617459,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": -0.02321633188924449,
+      "environment": "service_recovery",
+      "expected_return": 0.27263254743972254,
+      "expected_steps": 3.253925545648105,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.012494014891159498,
+      "kl_decoded_raw": 0.03628171559703432,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.2101372796248447,
+      "mean_state_occupancy_tv": 0.029798150652383323,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.7073674525602774,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.5214484840413733,
+      "task_failure": 0.39800355436662266,
+      "task_success": 0.6019964456333772,
+      "total_variation": 0.035471010576174584
+    },
+    {
+      "censored_raw_mass": 0.03547101057617459,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": -0.02321633188924449,
+      "environment": "service_recovery",
+      "expected_return": 0.27263254743972254,
+      "expected_steps": 3.253925545648105,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.012494014891159498,
+      "kl_decoded_raw": 0.03628171559703432,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.2101372796248447,
+      "mean_state_occupancy_tv": 0.029798150652383323,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.7073674525602774,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.5214484840413733,
+      "task_failure": 0.39800355436662266,
+      "task_success": 0.6019964456333772,
+      "total_variation": 0.035471010576174584
+    },
+    {
+      "censored_raw_mass": 0.11561839667392239,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": -0.23486241676054828,
+      "environment": "service_recovery",
+      "expected_return": 0.06098646256841875,
+      "expected_steps": 3.6869990012513276,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.04302760246998436,
+      "kl_decoded_raw": 0.12794837880106322,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.21013751224836566,
+      "mean_state_occupancy_tv": 0.16748868955752416,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.9190135374315812,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.6530782907357064,
+      "task_failure": 0.5171626431651031,
+      "task_success": 0.48283735683489687,
+      "total_variation": 0.11561839667392239
+    },
+    {
+      "censored_raw_mass": 0.1449530898656446,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": -0.3373511123086983,
+      "environment": "service_recovery",
+      "expected_return": -0.041502232979731254,
+      "expected_steps": 3.874153110400618,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.05563168496918556,
+      "kl_decoded_raw": 0.16753099700601012,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.1993396695471627,
+      "mean_state_occupancy_tv": 0.22943551891503491,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 1.0215022329797312,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.6992338232437915,
+      "task_failure": 0.5777958514458555,
+      "task_success": 0.4222041485541444,
+      "total_variation": 0.1592035072939771
+    },
+    {
+      "censored_raw_mass": 0.06294691472443235,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": -0.2606385853735105,
+      "environment": "service_recovery",
+      "expected_return": 0.03521029395545658,
+      "expected_steps": 3.6916404237451164,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.030736855733816112,
+      "kl_decoded_raw": 0.09593959803672097,
+      "label_by_action": {
+        "prepare_backup": "A",
+        "repair": "C",
+        "restart": "B"
+      },
+      "label_mapping": "A-C-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.1993396695471627,
+      "mean_state_occupancy_tv": 0.17285811671221232,
+      "mean_valid_action_mass": 0.9965503036670512,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7153197288282739,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.9447897060445434,
+      "raw_dominant_label_fraction": 0.9444444444444444,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 17,
+        "restart": 1
+      },
+      "raw_greedy_label_counts": {
+        "A": 17,
+        "B": 1
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.6551652484377786,
+      "task_failure": 0.5339989292900659,
+      "task_success": 0.4660010707099342,
+      "total_variation": 0.12524027292231873
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.5241545234927636,
+      "expected_steps": 1.0557412532497572,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.03346843195087938,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4558454765072364,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.3055893483891188,
+      "task_failure": 0.2662987596066378,
+      "task_success": 0.733701240393362,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": -0.013420202305960527,
+      "environment": "service_recovery",
+      "expected_return": 0.5107343211868031,
+      "expected_steps": 1.003127516640077,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.014681904990664725,
+      "kl_decoded_raw": 0.0449425162926705,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.0022449573931059507,
+      "mean_state_occupancy_tv": 0.019023352775165526,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4692656788131969,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31029830091454946,
+      "task_failure": 0.2744607357230397,
+      "task_success": 0.7255392642769601,
+      "total_variation": 0.051686284669686354
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": 0.022204025982818787,
+      "environment": "service_recovery",
+      "expected_return": 0.5463585494755824,
+      "expected_steps": 1.152534162637549,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.012817313577407969,
+      "kl_decoded_raw": 0.06320809747989926,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.08234001789046569,
+      "mean_state_occupancy_tv": 0.03207859962789943,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4336414505244176,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.29926037346898454,
+      "task_failure": 0.2525509047714474,
+      "task_success": 0.7474490952285526,
+      "total_variation": 0.0918111727363837
+    },
+    {
+      "censored_raw_mass": 0.007255764466818729,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.0017694530261315178,
+      "environment": "service_recovery",
+      "expected_return": 0.5223850704666321,
+      "expected_steps": 1.0503131228514078,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.002521456307329123,
+      "kl_decoded_raw": 0.007282999177533825,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.029984197679940826,
+      "mean_state_occupancy_tv": 0.002154144881135461,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.5238201585940323,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4576149295333679,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.30588488381060347,
+      "task_failure": 0.2674291390538113,
+      "task_success": 0.732570860946189,
+      "total_variation": 0.007255764466818718
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.054677219177188055,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": -0.014321190159430341,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.01937861034696492,
+      "kl_decoded_raw": 0.05641259324176587,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "A",
+        "restart": "C"
+      },
+      "label_mapping": "B-A-C",
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 1.2540145150905325e-05,
+      "mean_state_occupancy_tv": 0.020209485017511918,
+      "mean_valid_action_mass": 0.996926182715112,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.999987459854849,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "C": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.054677219177188034
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6445532597356355,
+      "expected_steps": 1.659612654775069,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.24722804590783673,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3354467402643645,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.26659688110671226,
+      "task_failure": 0.1925316799917909,
+      "task_success": 0.8074683200082091,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.37197581504241656,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.008469926402302375,
+      "environment": "service_recovery",
+      "expected_return": 0.6360833333333331,
+      "expected_steps": 1.333333333333333,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.1530622811311061,
+      "kl_decoded_raw": 0.4793698778124154,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.20816316678283853,
+      "mean_state_occupancy_tv": 0.08343691036248627,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.7918368332171614,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.34391666666666687,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.25566666666666676,
+      "task_failure": 0.20000000000000007,
+      "task_success": 0.7999999999999998,
+      "total_variation": 0.3719758150424165
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.0009924734962274417,
+      "environment": "service_recovery",
+      "expected_return": 0.6455457332318629,
+      "expected_steps": 1.531439760037446,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.025353703984117317,
+      "kl_decoded_raw": 0.08725698796590281,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.2229135269982117,
+      "mean_state_occupancy_tv": 0.03383049355347218,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.33445426676813705,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.25836829892355223,
+      "task_failure": 0.19324146135816603,
+      "task_success": 0.8067585386418334,
+      "total_variation": 0.14558104968033572
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.0012989967295437,
+      "environment": "service_recovery",
+      "expected_return": 0.6432542630060918,
+      "expected_steps": 1.7517236638460094,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.006643625774849605,
+      "kl_decoded_raw": 0.028489957161035886,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.26979275459142593,
+      "mean_state_occupancy_tv": 0.024971623971578486,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3367457369939082,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.2713273611809802,
+      "task_failure": 0.19260926446577514,
+      "task_success": 0.8073907355342249,
+      "total_variation": 0.08719009824362593
+    },
+    {
+      "censored_raw_mass": 0.056176173739196845,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.009751185222641623,
+      "environment": "service_recovery",
+      "expected_return": 0.6348020745129939,
+      "expected_steps": 1.6165188561080814,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.02010236212686357,
+      "kl_decoded_raw": 0.058755020882587494,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.21823842606085994,
+      "mean_state_occupancy_tv": 0.017499908352266953,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.438421695185626,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3451979254870061,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.2687241561268272,
+      "task_failure": 0.19867792430353304,
+      "task_success": 0.8013220756964671,
+      "total_variation": 0.056176173739196866
+    },
+    {
+      "censored_raw_mass": 0.20242936198338277,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.002516651153517735,
+      "environment": "service_recovery",
+      "expected_return": 0.6420366085821178,
+      "expected_steps": 1.4947984377710406,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.07862469093332188,
+      "kl_decoded_raw": 0.23872521824252946,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.2193669511730808,
+      "mean_state_occupancy_tv": 0.04464675282545005,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.686752864501235,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.33796339141788223,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.25965354565774945,
+      "task_failure": 0.19536667000229657,
+      "task_success": 0.8046333299977034,
+      "total_variation": 0.20242936198338274
+    },
+    {
+      "censored_raw_mass": 0.03926617439007081,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": -0.008082191275429418,
+      "environment": "service_recovery",
+      "expected_return": 0.6364710684602061,
+      "expected_steps": 1.6393389906620446,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.013940440161131575,
+      "kl_decoded_raw": 0.04060974233229956,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.23266910476960725,
+      "mean_state_occupancy_tv": 0.011388410787723296,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.3290276397221604,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3435289315397939,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.2677305832810026,
+      "task_failure": 0.19773085714636207,
+      "task_success": 0.8022691428536377,
+      "total_variation": 0.039266174390070824
+    },
+    {
+      "censored_raw_mass": 0.008530004124775241,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": -0.00024806125366116927,
+      "environment": "service_recovery",
+      "expected_return": 0.6443051984819743,
+      "expected_steps": 1.6590988516619347,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0030026816054129738,
+      "kl_decoded_raw": 0.008717065803941949,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.25236374063370043,
+      "mean_state_occupancy_tv": 0.003404458176611008,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.33569480151802567,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.26534640734763376,
+      "task_failure": 0.19290546645407802,
+      "task_success": 0.8070945335459221,
+      "total_variation": 0.008530004124775243
+    },
+    {
+      "censored_raw_mass": 0.13665958829934366,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": -0.016371707700692517,
+      "environment": "service_recovery",
+      "expected_return": 0.628181552034943,
+      "expected_steps": 1.4994357435225973,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.05156330491735952,
+      "kl_decoded_raw": 0.1543857829429408,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.18920809558766757,
+      "mean_state_occupancy_tv": 0.04549255951771471,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6796926863131497,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.351818447965057,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.2669505767227571,
+      "task_failure": 0.20338720252291173,
+      "task_success": 0.7966127974770884,
+      "total_variation": 0.1366595882993437
+    },
+    {
+      "censored_raw_mass": 0.1696659443421231,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.004990680624329946,
+      "environment": "service_recovery",
+      "expected_return": 0.6495439403599654,
+      "expected_steps": 1.526753939656585,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.06672289837196439,
+      "kl_decoded_raw": 0.20291799134387561,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.2276518784347251,
+      "mean_state_occupancy_tv": 0.045436774149517946,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.686752864501235,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.33045605964003455,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.2555778483127556,
+      "task_failure": 0.1910410650412304,
+      "task_success": 0.8089589349587695,
+      "total_variation": 0.1926809314836596
+    },
+    {
+      "censored_raw_mass": 0.08440409140566998,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": -0.0029337833492939502,
+      "environment": "service_recovery",
+      "expected_return": 0.6416194763863415,
+      "expected_steps": 1.5163353105316202,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.04182187847781746,
+      "kl_decoded_raw": 0.1310273686958958,
+      "label_by_action": {
+        "prepare_backup": "B",
+        "repair": "C",
+        "restart": "A"
+      },
+      "label_mapping": "B-C-A",
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.21051604592907616,
+      "mean_state_occupancy_tv": 0.037735484652246805,
+      "mean_valid_action_mass": 0.9992729635591585,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.3223720535309842,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.667750977909103,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.33838052361365845,
+      "raw_dominant_label_fraction": 0.8888888888888888,
+      "raw_greedy_action_counts": {
+        "prepare_backup": 2,
+        "restart": 16
+      },
+      "raw_greedy_label_counts": {
+        "A": 16,
+        "B": 2
+      },
+      "raw_logit_tie_state_count": 4,
+      "stakeholder_cost": 0.26003609377425324,
+      "task_failure": 0.19558100011339666,
+      "task_success": 0.8044189998866034,
+      "total_variation": 0.1595339038300484
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.5943478901116561,
+      "expected_steps": 1.304232813394544,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.15908664975990539,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.38565210988834386,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.2791071427184874,
+      "task_failure": 0.2239168828058148,
+      "task_success": 0.7760831171941853,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.24631231405450588,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.08451455677832287,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.09684041002476096,
+      "kl_decoded_raw": 0.29602431100390414,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.000998463459413327,
+      "mean_state_occupancy_tv": 0.10752911390051514,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.9990015365405865,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.24631231405450588
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": -0.033947742537392855,
+      "environment": "service_recovery",
+      "expected_return": 0.5604001475742633,
+      "expected_steps": 1.1378481881743852,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.026849335039520812,
+      "kl_decoded_raw": 0.08907417425477748,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.09471153888549223,
+      "mean_state_occupancy_tv": 0.051719697821233375,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4195998524257367,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28748338053092676,
+      "task_failure": 0.24515267152866982,
+      "task_success": 0.7548473284713304,
+      "total_variation": 0.13831942312275006
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": 0.020064671879063356,
+      "environment": "service_recovery",
+      "expected_return": 0.6144125619907195,
+      "expected_steps": 1.4465943200662295,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.010064858119263753,
+      "kl_decoded_raw": 0.04461225064934896,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.20142299165465152,
+      "mean_state_occupancy_tv": 0.0400197669642121,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3655874380092805,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.27764280238725636,
+      "task_failure": 0.21078449160831095,
+      "task_success": 0.789215508391689,
+      "total_variation": 0.1059275268362363
+    },
+    {
+      "censored_raw_mass": 0.04520125075334841,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.010518453056673427,
+      "environment": "service_recovery",
+      "expected_return": 0.5838294370549827,
+      "expected_steps": 1.2713100555851742,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.015933830021132706,
+      "kl_decoded_raw": 0.04628312940306078,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.14088161734736634,
+      "mean_state_occupancy_tv": 0.012475467227659347,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6015236962274942,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3961705629450173,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28049815853438453,
+      "task_failure": 0.23069734887428114,
+      "task_success": 0.7693026511257188,
+      "total_variation": 0.045201250753348396
+    },
+    {
+      "censored_raw_mass": 0.15454319554063345,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.036850047342557035,
+      "environment": "service_recovery",
+      "expected_return": 0.5574978427690991,
+      "expected_steps": 1.1258468895993818,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.05835817058930048,
+      "kl_decoded_raw": 0.1748606201578861,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.09748958705861065,
+      "mean_state_occupancy_tv": 0.055484386026600566,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7434234450296376,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4225021572309009,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28990192988276875,
+      "task_failure": 0.24668444984013913,
+      "task_success": 0.7533155501598608,
+      "total_variation": 0.15454319554063345
+    },
+    {
+      "censored_raw_mass": 0.04984124597142351,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": -0.0103671358548717,
+      "environment": "service_recovery",
+      "expected_return": 0.5839807542567844,
+      "expected_steps": 1.2657526226005582,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.017614897763812594,
+      "kl_decoded_raw": 0.05122003957504747,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.14093890243772908,
+      "mean_state_occupancy_tv": 0.013723217981460957,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6015236962274942,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.39601924574321556,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28021667417941004,
+      "task_failure": 0.23064338479890878,
+      "task_success": 0.7693566152010911,
+      "total_variation": 0.04984124597142349
+    },
+    {
+      "censored_raw_mass": 0.054187020092027506,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": -0.01019714613947531,
+      "environment": "service_recovery",
+      "expected_return": 0.5841507439721808,
+      "expected_steps": 1.2598923464705174,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.019203039605665426,
+      "kl_decoded_raw": 0.05590062614544603,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.14093890243772908,
+      "mean_state_occupancy_tv": 0.014941273400040964,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6015236962274942,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3958492560278192,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.2795367153178244,
+      "task_failure": 0.23064338479890878,
+      "task_success": 0.7693566152010911,
+      "total_variation": 0.05418702009202748
+    },
+    {
+      "censored_raw_mass": 0.11571067549935314,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": -0.008537567544785407,
+      "environment": "service_recovery",
+      "expected_return": 0.5858103225668707,
+      "expected_steps": 1.179317106403483,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.042452452430575716,
+      "kl_decoded_raw": 0.1254227434560027,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.13848703494901718,
+      "mean_state_occupancy_tv": 0.03409629930496011,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6156343992741632,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.39418967743312927,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.2728984009390646,
+      "task_failure": 0.23064338479890878,
+      "task_success": 0.7693566152010913,
+      "total_variation": 0.11571067549935311
+    },
+    {
+      "censored_raw_mass": 0.15454319554063345,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": -0.05056070233036092,
+      "environment": "service_recovery",
+      "expected_return": 0.5437871877812952,
+      "expected_steps": 1.089647140456665,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.06004456358042605,
+      "kl_decoded_raw": 0.18159371916350478,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.06973399866139864,
+      "mean_state_occupancy_tv": 0.06998937383428662,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.7434234450296376,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4362128122187048,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.295874888491317,
+      "task_failure": 0.2548293933972504,
+      "task_success": 0.7451706066027496,
+      "total_variation": 0.17757677885252057
+    },
+    {
+      "censored_raw_mass": 0.09446580214506,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": -0.03458607281226367,
+      "environment": "service_recovery",
+      "expected_return": 0.5597618172993925,
+      "expected_steps": 1.1262725423150797,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.04073844562104896,
+      "kl_decoded_raw": 0.12478317052581082,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "A",
+        "restart": "B"
+      },
+      "label_mapping": "C-A-B",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.09345145180087552,
+      "mean_state_occupancy_tv": 0.05488980653107292,
+      "mean_valid_action_mass": 0.9962933558470886,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6088863191324715,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.42023818270060753,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "B": 18
+      },
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28670402756083524,
+      "task_failure": 0.2457081172069326,
+      "task_success": 0.7542918827930675,
+      "total_variation": 0.1490893583983153
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6202054057122852,
+      "expected_steps": 1.3849517695000728,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.19624886668221728,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.35979459428771476,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2720823418356761,
+      "task_failure": 0.20784933921919724,
+      "task_success": 0.7921506607808027,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.30470737379050616,
+      "decoder": "greedy",
+      "decoder_value_gap": -0.11037207237895197,
+      "environment": "service_recovery",
+      "expected_return": 0.5098333333333332,
+      "expected_steps": 1.0,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.12433261757778832,
+      "kl_decoded_raw": 0.38830658829978226,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.0013433945984551252,
+      "mean_state_occupancy_tv": 0.13550684438364827,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.9986566054015447,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.47016666666666673,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.31066666666666676,
+      "task_failure": 0.275,
+      "task_success": 0.7249999999999999,
+      "total_variation": 0.30470737379050616
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": -0.03390613436486911,
+      "environment": "service_recovery",
+      "expected_return": 0.5862992713474161,
+      "expected_steps": 1.210325836530864,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.028700379856545444,
+      "kl_decoded_raw": 0.09711007404762524,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.1335792357114587,
+      "mean_state_occupancy_tv": 0.053489423891374704,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3937007286525839,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2776554939997455,
+      "task_failure": 0.22952457010176522,
+      "task_success": 0.7704754298982349,
+      "total_variation": 0.14666037612308486
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": 0.019117956525139923,
+      "environment": "service_recovery",
+      "expected_return": 0.6393233622374251,
+      "expected_steps": 1.5213494510218202,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.008469501425663644,
+      "kl_decoded_raw": 0.03651096012241663,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.2365186790307646,
+      "mean_state_occupancy_tv": 0.037498104522849206,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.34067663776257484,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2709058161227219,
+      "task_failure": 0.19530012248792947,
+      "task_success": 0.8046998775120705,
+      "total_variation": 0.10276774439355779
+    },
+    {
+      "censored_raw_mass": 0.0872107375524028,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.019376591251042963,
+      "environment": "service_recovery",
+      "expected_return": 0.6008288144612423,
+      "expected_steps": 1.317508629628808,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.03140992679867629,
+      "kl_decoded_raw": 0.09204345128877994,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.17796280362847014,
+      "mean_state_occupancy_tv": 0.02510475264383002,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.3610234024109629,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3791711855387577,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.27234821498291323,
+      "task_failure": 0.2207227545286863,
+      "task_success": 0.7792772454713136,
+      "total_variation": 0.08721073755240281
+    },
+    {
+      "censored_raw_mass": 0.17034876223894102,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.02170058747497894,
+      "environment": "service_recovery",
+      "expected_return": 0.5985048182373063,
+      "expected_steps": 1.209209876845732,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.06401642333426913,
+      "kl_decoded_raw": 0.19127937412423893,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.15240271771210448,
+      "mean_state_occupancy_tv": 0.05058911960952111,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6376332029905817,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3814951817626937,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2668849805059608,
+      "task_failure": 0.2231826244241355,
+      "task_success": 0.7768173755758645,
+      "total_variation": 0.17034876223894102
+    },
+    {
+      "censored_raw_mass": 0.0374682545364923,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": -0.0040153835578257135,
+      "environment": "service_recovery",
+      "expected_return": 0.6161900221544595,
+      "expected_steps": 1.373143464605483,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.013369693015977324,
+      "kl_decoded_raw": 0.039027631088654036,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.19395645787730503,
+      "mean_state_occupancy_tv": 0.008506350647547994,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.13531999855218077,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3638099778455405,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.27084743322449506,
+      "task_failure": 0.21073207969294439,
+      "task_success": 0.7892679203070555,
+      "total_variation": 0.03746825453649231
+    },
+    {
+      "censored_raw_mass": 0.035478693341047494,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": -0.0016123021977679786,
+      "environment": "service_recovery",
+      "expected_return": 0.6185931035145172,
+      "expected_steps": 1.3552103092173535,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.012818132161216153,
+      "kl_decoded_raw": 0.037615953513078136,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.1764581650060355,
+      "mean_state_occupancy_tv": 0.008410218725972748,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.2981385503346461,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.36140689648548274,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2714438549732258,
+      "task_failure": 0.20903062182811746,
+      "task_success": 0.7909693781718825,
+      "total_variation": 0.035478693341047494
+    },
+    {
+      "censored_raw_mass": 0.16734381835913678,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": -0.02170058747497894,
+      "environment": "service_recovery",
+      "expected_return": 0.5985048182373063,
+      "expected_steps": 1.209209876845732,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.06277970696884576,
+      "kl_decoded_raw": 0.1874331678276204,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.15575554383303514,
+      "mean_state_occupancy_tv": 0.05058911960952111,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.623952945360468,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3814951817626937,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2668849805059608,
+      "task_failure": 0.2231826244241355,
+      "task_success": 0.7768173755758645,
+      "total_variation": 0.16734381835913678
+    },
+    {
+      "censored_raw_mass": 0.17034876223894102,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": -0.03793777046877733,
+      "environment": "service_recovery",
+      "expected_return": 0.5822676352435079,
+      "expected_steps": 1.1730107177896094,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.06539443585372012,
+      "kl_decoded_raw": 0.19693455983160132,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.1262652305783905,
+      "mean_state_occupancy_tv": 0.06431524785301942,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6376332029905817,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3977323647564921,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.2757176507275431,
+      "task_failure": 0.23253530138307082,
+      "task_success": 0.7674646986169291,
+      "total_variation": 0.1827388465987016
+    },
+    {
+      "censored_raw_mass": 0.12304383969030491,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": -0.03837726550556875,
+      "environment": "service_recovery",
+      "expected_return": 0.5818281402067165,
+      "expected_steps": 1.1918748956838383,
+      "input_tokens": 5796,
+      "jensen_shannon": 0.0519537028643424,
+      "kl_decoded_raw": 0.1586689006251241,
+      "label_by_action": {
+        "prepare_backup": "C",
+        "repair": "B",
+        "restart": "A"
+      },
+      "label_mapping": "C-B-A",
+      "mean_best_valid_token_rank": 0.9999999999999998,
+      "mean_optimal_action_probability": 0.12871787807376373,
+      "mean_state_occupancy_tv": 0.05959920337946223,
+      "mean_valid_action_mass": 0.9940960459470545,
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "occupancy_weighted_logit_tie_rate": 0.0870132468965821,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.6082842322266848,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3981718597932835,
+      "raw_dominant_label_fraction": 1.0,
+      "raw_greedy_action_counts": {
+        "restart": 18
+      },
+      "raw_greedy_label_counts": {
+        "A": 18
+      },
+      "raw_logit_tie_state_count": 1,
+      "stakeholder_cost": 0.277475630874709,
+      "task_failure": 0.23253530138307085,
+      "task_success": 0.7674646986169292,
+      "total_variation": 0.16666537972920809
+    }
+  ],
+  "source_trace_sha256": "965886d36b313df647d76e75b3422707bfc0005f8ebc72c12323f36d0af3725d",
+  "summary": {
+    "by_decoder": [
+      {
+        "decoder": "greedy",
+        "label_mapping_return_range": 0.9402499999999998,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": -0.00473920472828171,
+        "maximum_expected_return": 0.7093333333333333,
+        "mean_censored_raw_mass": 0.27411928898259724,
+        "mean_decoder_value_gap": -0.12486374940715382,
+        "mean_expected_return": 0.4406666666666666,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.8941337133593074,
+        "mean_optimality_gap": 0.5393333333333334,
+        "mean_policy_total_variation": 0.27411928898259724,
+        "mean_stakeholder_cost": 0.37900000000000006,
+        "mean_state_occupancy_tv": 0.1273674904736525,
+        "mean_task_success": 0.6902777777777777,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.5267655459956336,
+        "minimum_expected_return": -0.2309166666666666,
+        "negative_value_gap_count": 6,
+        "positive_value_gap_count": 0,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "min_p_0.1",
+        "label_mapping_return_range": 0.4530529722007721,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.011612981578879689,
+        "maximum_expected_return": 0.7256855196404947,
+        "mean_censored_raw_mass": 0.032303278677192425,
+        "mean_decoder_value_gap": -0.006330341676783267,
+        "mean_expected_return": 0.5592000743970371,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.4358282392075439,
+        "mean_optimality_gap": 0.42079992560296287,
+        "mean_policy_total_variation": 0.03230327867719241,
+        "mean_stakeholder_cost": 0.31681538512326185,
+        "mean_state_occupancy_tv": 0.013691398421561871,
+        "mean_task_success": 0.7589359471185683,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.02321633188924449,
+        "minimum_expected_return": 0.27263254743972254,
+        "negative_value_gap_count": 5,
+        "positive_value_gap_count": 1,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "min_p_0.3",
+        "label_mapping_return_range": 0.6906561705524391,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.037570095059242914,
+        "maximum_expected_return": 0.7516426331208579,
+        "mean_censored_raw_mass": 0.11587348589746338,
+        "mean_decoder_value_gap": -0.043037229096865436,
+        "mean_expected_return": 0.522493186976955,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.620221720838953,
+        "mean_optimality_gap": 0.457506813023045,
+        "mean_policy_total_variation": 0.11587348589746337,
+        "mean_stakeholder_cost": 0.33404274712660836,
+        "mean_state_occupancy_tv": 0.062452425079371675,
+        "mean_task_success": 0.7373359158390714,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.23486241676054828,
+        "minimum_expected_return": 0.06098646256841875,
+        "negative_value_gap_count": 5,
+        "positive_value_gap_count": 1,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "raw",
+        "label_mapping_return_range": 0.41822365873264794,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.0,
+        "maximum_expected_return": 0.714072538061615,
+        "mean_censored_raw_mass": 0.0,
+        "mean_decoder_value_gap": 0.0,
+        "mean_expected_return": 0.5655304160738204,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.0,
+        "mean_optimality_gap": 0.41446958392617955,
+        "mean_policy_total_variation": 0.0,
+        "mean_stakeholder_cost": 0.3123278927498187,
+        "mean_state_occupancy_tv": 0.0,
+        "mean_task_success": 0.7624082595075166,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": 0.0,
+        "minimum_expected_return": 0.29584887932896703,
+        "negative_value_gap_count": 0,
+        "positive_value_gap_count": 0,
+        "zero_value_gap_count": 6
+      },
+      {
+        "decoder": "temperature_0.5",
+        "label_mapping_return_range": 0.6872863404014063,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.029831676165335996,
+        "maximum_expected_return": 0.743904214226951,
+        "mean_censored_raw_mass": 0.0,
+        "mean_decoder_value_gap": -0.04828015584168025,
+        "mean_expected_return": 0.5172502602321402,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.0,
+        "mean_optimality_gap": 0.46274973976785977,
+        "mean_policy_total_variation": 0.12541836608014792,
+        "mean_stakeholder_cost": 0.3364925778664665,
+        "mean_state_occupancy_tv": 0.0610106876654993,
+        "mean_task_success": 0.7342489364658378,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.23923100550342247,
+        "minimum_expected_return": 0.056617873825544576,
+        "negative_value_gap_count": 4,
+        "positive_value_gap_count": 2,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "temperature_0.5_then_top_p_0.8",
+        "label_mapping_return_range": 0.7944152678377687,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.03884049679642254,
+        "maximum_expected_return": 0.7529130348580375,
+        "mean_censored_raw_mass": 0.15292100682144866,
+        "mean_decoder_value_gap": -0.06605659964108573,
+        "mean_expected_return": 0.49947381643273464,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.6966492049702441,
+        "mean_optimality_gap": 0.48052618356726534,
+        "mean_policy_total_variation": 0.16831445157944128,
+        "mean_stakeholder_cost": 0.3454034778880932,
+        "mean_state_occupancy_tv": 0.08525317504506841,
+        "mean_task_success": 0.7238831239365053,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.3373511123086983,
+        "minimum_expected_return": -0.041502232979731254,
+        "negative_value_gap_count": 4,
+        "positive_value_gap_count": 2,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "temperature_1.5",
+        "label_mapping_return_range": 0.28269122890189524,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.1110692785817669,
+        "maximum_expected_return": 0.6896093868126292,
+        "mean_censored_raw_mass": 0.0,
+        "mean_decoder_value_gap": 0.024448964165043247,
+        "mean_expected_return": 0.5899793802388636,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.0,
+        "mean_optimality_gap": 0.3900206197611363,
+        "mean_policy_total_variation": 0.09190524237274844,
+        "mean_stakeholder_cost": 0.30040386305249095,
+        "mean_state_occupancy_tv": 0.04408389159764283,
+        "mean_task_success": 0.776720230667991,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.024463151248985793,
+        "minimum_expected_return": 0.40691815791073394,
+        "negative_value_gap_count": 2,
+        "positive_value_gap_count": 4,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "top_k_2",
+        "label_mapping_return_range": 0.49203651643438545,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.06441523381774406,
+        "maximum_expected_return": 0.778487771879359,
+        "mean_censored_raw_mass": 0.06158976486670583,
+        "mean_decoder_value_gap": 0.0022669878962101784,
+        "mean_expected_return": 0.5677974039700305,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.4730496359425664,
+        "mean_optimality_gap": 0.4122025960299694,
+        "mean_policy_total_variation": 0.06158976486670583,
+        "mean_stakeholder_cost": 0.31206670373348777,
+        "mean_state_occupancy_tv": 0.024246227010014554,
+        "mean_task_success": 0.7638760532689349,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.019376591251042963,
+        "minimum_expected_return": 0.2864512554449736,
+        "negative_value_gap_count": 5,
+        "positive_value_gap_count": 1,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "top_p_0.6",
+        "label_mapping_return_range": 0.686729122457998,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": -0.002516651153517735,
+        "maximum_expected_return": 0.7093793717962116,
+        "mean_censored_raw_mass": 0.1695092487874187,
+        "mean_decoder_value_gap": -0.05888004539777348,
+        "mean_expected_return": 0.5066503706760469,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.7327607498365825,
+        "mean_optimality_gap": 0.473349629323953,
+        "mean_policy_total_variation": 0.1695092487874187,
+        "mean_stakeholder_cost": 0.3424787300152772,
+        "mean_state_occupancy_tv": 0.08033349444051482,
+        "mean_task_success": 0.7281800354532441,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.27319862999075345,
+        "minimum_expected_return": 0.022650249338213583,
+        "negative_value_gap_count": 6,
+        "positive_value_gap_count": 0,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "top_p_0.8_then_temperature_0.5",
+        "label_mapping_return_range": 0.7189763496887203,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.0401141055825619,
+        "maximum_expected_return": 0.7541866436441769,
+        "mean_censored_raw_mass": 0.0813570794807265,
+        "mean_decoder_value_gap": -0.05179046526958422,
+        "mean_expected_return": 0.5137399508042362,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.6000381196585637,
+        "mean_optimality_gap": 0.4662600491957638,
+        "mean_policy_total_variation": 0.13766088509720384,
+        "mean_stakeholder_cost": 0.3378949036982443,
+        "mean_state_occupancy_tv": 0.0680955331506167,
+        "mean_task_success": 0.7321424511525315,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.2606385853735105,
+        "minimum_expected_return": 0.03521029395545658,
+        "negative_value_gap_count": 5,
+        "positive_value_gap_count": 1,
+        "zero_value_gap_count": 0
+      },
+      {
+        "decoder": "top_p_0.9",
+        "label_mapping_return_range": 0.4615517462503518,
+        "label_mappings": 6,
+        "maximum_decoder_value_gap": 0.02011175562845935,
+        "maximum_expected_return": 0.7341842936900743,
+        "mean_censored_raw_mass": 0.03814270712356944,
+        "mean_decoder_value_gap": -0.0066484128513903855,
+        "mean_expected_return": 0.55888200322243,
+        "mean_logit_tie_rate": 0.08407719905247858,
+        "mean_optimal_action_censor_rate": 0.4635297538641597,
+        "mean_optimality_gap": 0.42111799677757,
+        "mean_policy_total_variation": 0.03814270712356944,
+        "mean_stakeholder_cost": 0.3165997717157481,
+        "mean_state_occupancy_tv": 0.016370573999965624,
+        "mean_task_success": 0.7586879641009112,
+        "mean_valid_action_mass": 0.9969011660384481,
+        "minimum_decoder_value_gap": -0.02321633188924449,
+        "minimum_expected_return": 0.27263254743972254,
+        "negative_value_gap_count": 5,
+        "positive_value_gap_count": 1,
+        "zero_value_gap_count": 0
+      }
+    ],
+    "operator_order_effect": {
+      "left": "temperature_0.5_then_top_p_0.8",
+      "maximum_absolute_return_delta": 0.07671252693518783,
+      "mean_return_delta": -0.014266134371501522,
+      "paired_label_mappings": 6,
+      "right": "top_p_0.8_then_temperature_0.5"
+    }
+  },
+  "trace_metadata": {
+    "checkpoint_bytes": "3098955668",
+    "checkpoint_files": "config.json,generation_config.json,merges.txt,model.safetensors,tokenizer.json,tokenizer_config.json,vocab.json",
+    "checkpoint_tree_sha256": "75f02ee932e9b1d9c77738ce4684b82575cd9102733598bec42cad05d92b255f",
+    "device": "mps",
+    "model_class": "Qwen2ForCausalLM",
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "prompt_version": "samplerscope-state-v4",
+    "tokenizer_class": "Qwen2Tokenizer",
+    "torch_version": "2.13.0",
+    "transformers_version": "5.15.0"
+  }
+}

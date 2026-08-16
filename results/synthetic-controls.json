@@ -1,0 +1,1394 @@
+{
+  "decoder_stacks": {
+    "greedy": [
+      "greedy"
+    ],
+    "min_p_0.1": [
+      [
+        "min_p",
+        0.1
+      ]
+    ],
+    "min_p_0.3": [
+      [
+        "min_p",
+        0.3
+      ]
+    ],
+    "raw": [],
+    "temperature_0.5": [
+      [
+        "temperature",
+        0.5
+      ]
+    ],
+    "temperature_0.5_then_top_p_0.8": [
+      [
+        "temperature",
+        0.5
+      ],
+      [
+        "top_p",
+        0.8
+      ]
+    ],
+    "temperature_1.5": [
+      [
+        "temperature",
+        1.5
+      ]
+    ],
+    "top_k_2": [
+      [
+        "top_k",
+        2
+      ]
+    ],
+    "top_p_0.6": [
+      [
+        "top_p",
+        0.6
+      ]
+    ],
+    "top_p_0.8_then_temperature_0.5": [
+      [
+        "top_p",
+        0.8
+      ],
+      [
+        "temperature",
+        0.5
+      ]
+    ],
+    "top_p_0.9": [
+      [
+        "top_p",
+        0.9
+      ]
+    ]
+  },
+  "kind": "synthetic_control",
+  "prompt_version": "samplerscope-state-v4",
+  "results": [
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.9790558392536706,
+      "expected_steps": 2.5032794149850193,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.997521263015562,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0009441607463294144,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.08076243141444063,
+      "synthetic_margin": "high",
+      "task_failure": 0.0005023685951462996,
+      "task_success": 0.9994976314048538,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "greedy",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.0009418468722103279,
+      "environment": "service_recovery",
+      "expected_return": 0.9799976861258809,
+      "expected_steps": 2.5000081921258395,
+      "jensen_shannon": 0.000840458298315577,
+      "kl_decoded_raw": 0.0024388044071254706,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.9999938557876471,
+      "mean_state_occupancy_tv": 0.0011536603824374419,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 2.3138741190864565e-06,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.0800018821962723,
+      "synthetic_margin": "high",
+      "task_failure": 1.2288833673766577e-06,
+      "task_success": 0.9999987711166324,
+      "total_variation": 0.0024725927720845955
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.006515868683970472,
+      "environment": "service_recovery",
+      "expected_return": 0.9725399705697001,
+      "expected_steps": 2.5230290166985623,
+      "jensen_shannon": 0.0034505536152045916,
+      "kl_decoded_raw": 0.021280366771240906,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.9816903928255044,
+      "mean_state_occupancy_tv": 0.007372281231371862,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.007460029430299886,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.08577285349186702,
+      "synthetic_margin": "high",
+      "task_failure": 0.004011210704888777,
+      "task_success": 0.995988789295111,
+      "total_variation": 0.015830870190057703
+    },
+    {
+      "censored_raw_mass": 6.128982466927777e-06,
+      "decoder": "top_k_2",
+      "decoder_value_gap": 4.341786603578868e-06,
+      "environment": "service_recovery",
+      "expected_return": 0.9790601810402741,
+      "expected_steps": 2.503293768903781,
+      "jensen_shannon": 2.1241481538938127e-06,
+      "kl_decoded_raw": 6.129001249131316e-06,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.9975273768433651,
+      "mean_state_occupancy_tv": 4.225810457960092e-06,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0009398189597258355,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.08076036020645126,
+      "synthetic_margin": "high",
+      "task_failure": 0.0004998192720752853,
+      "task_success": 0.9995001807279247,
+      "total_variation": 6.1289824669068045e-06
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.002478736984437728,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": 0.0009441607463294144,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.002481814138979589,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.0011565276802770331,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "high",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.002478736984437704
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6226718149025503,
+      "expected_steps": 2.059425439878676,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.36032658245669646,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3573281850974497,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28815056622292373,
+      "synthetic_margin": "low",
+      "task_failure": 0.20352702902781267,
+      "task_success": 0.7964729709721874,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.6396734175433039,
+      "decoder": "greedy",
+      "decoder_value_gap": 0.3573281850974497,
+      "environment": "service_recovery",
+      "expected_return": 0.98,
+      "expected_steps": 2.4999999999999996,
+      "jensen_shannon": 0.2999433783741205,
+      "kl_decoded_raw": 1.0207444852743415,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 1.0000000000000002,
+      "mean_state_occupancy_tv": 0.24977716477613926,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.07999999999999997,
+      "synthetic_margin": "low",
+      "task_failure": 0.0,
+      "task_success": 0.9999999999999999,
+      "total_variation": 0.6396734175433039
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.007714130407491027,
+      "environment": "service_recovery",
+      "expected_return": 0.6303859453100413,
+      "expected_steps": 2.1177555685472687,
+      "jensen_shannon": 0.0005292329575372874,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.3878535401023234,
+      "mean_state_occupancy_tv": 0.015900557537790513,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.34961405468995865,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28329047612971026,
+      "synthetic_margin": "low",
+      "task_failure": 0.19919429043835413,
+      "task_success": 0.800805709561646,
+      "total_variation": 0.02752695764562702
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.0023485363036973572,
+      "environment": "service_recovery",
+      "expected_return": 0.620323278598853,
+      "expected_steps": 2.0397061323759313,
+      "jensen_shannon": 5.912428715704838e-05,
+      "kl_decoded_raw": 0.00023657417947974685,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.35126060071115894,
+      "mean_state_occupancy_tv": 0.0053030129881619995,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.35967672140114704,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28963890773736867,
+      "synthetic_margin": "low",
+      "task_failure": 0.20484466297787,
+      "task_success": 0.79515533702213,
+      "total_variation": 0.009065981745537494
+    },
+    {
+      "censored_raw_mass": 0.3070500592398952,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.07992031328576954,
+      "environment": "service_recovery",
+      "expected_return": 0.5427515016167808,
+      "expected_steps": 2.9879426402610565,
+      "jensen_shannon": 0.12041519847052805,
+      "kl_decoded_raw": 0.36679751795675164,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.519989340155582,
+      "mean_state_occupancy_tv": 0.2438153362067464,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4372484983832192,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.3273669526983599,
+      "synthetic_margin": "low",
+      "task_failure": 0.25027117347241973,
+      "task_success": 0.7497288265275804,
+      "total_variation": 0.3070500592398952
+    },
+    {
+      "censored_raw_mass": 0.3070500592398952,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.07992031328576954,
+      "environment": "service_recovery",
+      "expected_return": 0.5427515016167808,
+      "expected_steps": 2.9879426402610565,
+      "jensen_shannon": 0.12041519847052805,
+      "kl_decoded_raw": 0.36679751795675164,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.519989340155582,
+      "mean_state_occupancy_tv": 0.2438153362067464,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.4372484983832192,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.3273669526983599,
+      "synthetic_margin": "low",
+      "task_failure": 0.25027117347241973,
+      "task_success": 0.7497288265275804,
+      "total_variation": 0.3070500592398952
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6226718149025503,
+      "expected_steps": 2.059425439878676,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.36032658245669646,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3573281850974497,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28815056622292373,
+      "synthetic_margin": "low",
+      "task_failure": 0.20352702902781267,
+      "task_success": 0.7964729709721874,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6226718149025503,
+      "expected_steps": 2.059425439878676,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.36032658245669646,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3573281850974497,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28815056622292373,
+      "synthetic_margin": "low",
+      "task_failure": 0.20352702902781267,
+      "task_success": 0.7964729709721874,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": 0.0,
+      "environment": "service_recovery",
+      "expected_return": 0.6226718149025503,
+      "expected_steps": 2.059425439878676,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.36032658245669646,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.3573281850974497,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28815056622292373,
+      "synthetic_margin": "low",
+      "task_failure": 0.20352702902781267,
+      "task_success": 0.7964729709721874,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.007714130407491027,
+      "environment": "service_recovery",
+      "expected_return": 0.6303859453100413,
+      "expected_steps": 2.1177555685472687,
+      "jensen_shannon": 0.0005292329575372874,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.3878535401023235,
+      "mean_state_occupancy_tv": 0.015900557537790513,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.34961405468995865,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28329047612971026,
+      "synthetic_margin": "low",
+      "task_failure": 0.19919429043835413,
+      "task_success": 0.800805709561646,
+      "total_variation": 0.02752695764562702
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": 0.007714130407491027,
+      "environment": "service_recovery",
+      "expected_return": 0.6303859453100413,
+      "expected_steps": 2.1177555685472687,
+      "jensen_shannon": 0.0005292329575372874,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0000000000000002,
+      "mean_optimal_action_probability": 0.3878535401023234,
+      "mean_state_occupancy_tv": 0.015900557537790513,
+      "mean_valid_action_mass": 1.0000000000000002,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.98,
+      "optimality_gap": 0.34961405468995865,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.28329047612971026,
+      "synthetic_margin": "low",
+      "task_failure": 0.19919429043835413,
+      "task_success": 0.800805709561646,
+      "total_variation": 0.02752695764562702
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "queue_control",
+      "expected_return": 0.1191888093284937,
+      "expected_steps": 3.9982429303883698,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9984729471463003,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.002008586504839649,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.49552683421536775,
+      "synthetic_margin": "high",
+      "task_failure": 0.5046196547451098,
+      "task_success": 0.4953803452548905,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "greedy",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.0020036056528792423,
+      "environment": "queue_control",
+      "expected_return": 0.12119241498137294,
+      "expected_steps": 3.9999956478415317,
+      "jensen_shannon": 0.000840458298315577,
+      "kl_decoded_raw": 0.00243880440712547,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999962206240706,
+      "mean_state_occupancy_tv": 0.0014132678253488845,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 4.9808519604066515e-06,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.49396430368970506,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035443393974672,
+      "task_success": 0.4964556606025328,
+      "total_variation": 0.002472592772084595
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.012785693654630156,
+      "environment": "queue_control",
+      "expected_return": 0.10640311567386354,
+      "expected_steps": 3.9869643442106555,
+      "jensen_shannon": 0.0034505536152045933,
+      "kl_decoded_raw": 0.021280366771240906,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9886108401987559,
+      "mean_state_occupancy_tv": 0.008964385600883959,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.014794280159469805,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.5054485893763694,
+      "synthetic_margin": "high",
+      "task_failure": 0.5114898246546963,
+      "task_success": 0.48851017534530394,
+      "total_variation": 0.0158308701900577
+    },
+    {
+      "censored_raw_mass": 6.128982466927776e-06,
+      "decoder": "top_k_2",
+      "decoder_value_gap": 1.817830438871626e-06,
+      "environment": "queue_control",
+      "expected_return": 0.11919062715893257,
+      "expected_steps": 3.9982465212721796,
+      "jensen_shannon": 2.1241481538938127e-06,
+      "kl_decoded_raw": 6.129001249131316e-06,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9984790668069939,
+      "mean_state_occupancy_tv": 5.36261210683668e-06,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0020067686744007773,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.49552575399188636,
+      "synthetic_margin": "high",
+      "task_failure": 0.5046186228953972,
+      "task_success": 0.49538137710460267,
+      "total_variation": 6.128982466906805e-06
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0024787369844377276,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": 0.002008586504839649,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.0008598337464208348,
+      "kl_decoded_raw": 0.0024818141389795897,
+      "mean_best_valid_token_rank": 0.9999999999999999,
+      "mean_optimal_action_probability": 0.9999999999999999,
+      "mean_state_occupancy_tv": 0.0014167840959681804,
+      "mean_valid_action_mass": 0.9999999999999999,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "high",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.0024787369844377033
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "raw",
+      "decoder_value_gap": 0.0,
+      "environment": "queue_control",
+      "expected_return": -0.25673481968525685,
+      "expected_steps": 3.567920625747497,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.47734291002639445,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.3779322155185902,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7608684793338133,
+      "synthetic_margin": "low",
+      "task_failure": 0.7110117999012023,
+      "task_success": 0.28898820009879767,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.6396734175433038,
+      "decoder": "greedy",
+      "decoder_value_gap": 0.3779322155185902,
+      "environment": "queue_control",
+      "expected_return": 0.12119739583333335,
+      "expected_steps": 4.0,
+      "jensen_shannon": 0.2999433783741205,
+      "kl_decoded_raw": 1.0207444852743415,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 1.0,
+      "mean_state_occupancy_tv": 0.36584607166128563,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        "greedy"
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.0,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.4939604166666667,
+      "synthetic_margin": "low",
+      "task_failure": 0.5035416666666667,
+      "task_success": 0.4964583333333333,
+      "total_variation": 0.6396734175433038
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5",
+      "decoder_value_gap": 0.008907393281288645,
+      "environment": "queue_control",
+      "expected_return": -0.2478274264039682,
+      "expected_steps": 3.583795837354315,
+      "jensen_shannon": 0.0005292329575372876,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.504125331249622,
+      "mean_state_occupancy_tv": 0.018646075033099264,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.36902482223730154,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7549402921479411,
+      "synthetic_margin": "low",
+      "task_failure": 0.7060615689113221,
+      "task_success": 0.2939384310886781,
+      "total_variation": 0.02752695764562701
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_1.5",
+      "decoder_value_gap": -0.00276950128593606,
+      "environment": "queue_control",
+      "expected_return": -0.2595043209711929,
+      "expected_steps": 3.562748868178418,
+      "jensen_shannon": 5.912428715704838e-05,
+      "kl_decoded_raw": 0.00023657417947974682,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.46841558966153085,
+      "mean_state_occupancy_tv": 0.006215278820373487,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          1.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.38070171680452625,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7627220460792803,
+      "synthetic_margin": "low",
+      "task_failure": 0.7125492063009151,
+      "task_success": 0.2874507936990847,
+      "total_variation": 0.009065981745537495
+    },
+    {
+      "censored_raw_mass": 0.30705005923989526,
+      "decoder": "top_k_2",
+      "decoder_value_gap": -0.062375876689151954,
+      "environment": "queue_control",
+      "expected_return": -0.3191106963744088,
+      "expected_steps": 3.5877973450991174,
+      "jensen_shannon": 0.12041519847052803,
+      "kl_decoded_raw": 0.3667975179567517,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.6888562678897001,
+      "mean_state_occupancy_tv": 0.2147083657321121,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_k",
+          2
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.44030809220774214,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.8157823785722446,
+      "synthetic_margin": "low",
+      "task_failure": 0.743443401154232,
+      "task_success": 0.25655659884576826,
+      "total_variation": 0.30705005923989526
+    },
+    {
+      "censored_raw_mass": 0.30705005923989526,
+      "decoder": "top_p_0.6",
+      "decoder_value_gap": -0.062375876689151954,
+      "environment": "queue_control",
+      "expected_return": -0.3191106963744088,
+      "expected_steps": 3.5877973450991174,
+      "jensen_shannon": 0.12041519847052803,
+      "kl_decoded_raw": 0.3667975179567517,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.6888562678897001,
+      "mean_state_occupancy_tv": 0.2147083657321121,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.6
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.44030809220774214,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.8157823785722446,
+      "synthetic_margin": "low",
+      "task_failure": 0.743443401154232,
+      "task_success": 0.25655659884576826,
+      "total_variation": 0.30705005923989526
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "top_p_0.9",
+      "decoder_value_gap": 0.0,
+      "environment": "queue_control",
+      "expected_return": -0.25673481968525685,
+      "expected_steps": 3.567920625747497,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.47734291002639445,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.9
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.3779322155185902,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7608684793338133,
+      "synthetic_margin": "low",
+      "task_failure": 0.7110117999012023,
+      "task_success": 0.28898820009879767,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "min_p_0.1",
+      "decoder_value_gap": 0.0,
+      "environment": "queue_control",
+      "expected_return": -0.25673481968525685,
+      "expected_steps": 3.567920625747497,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.47734291002639445,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.1
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.3779322155185902,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7608684793338133,
+      "synthetic_margin": "low",
+      "task_failure": 0.7110117999012023,
+      "task_success": 0.28898820009879767,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "min_p_0.3",
+      "decoder_value_gap": 0.0,
+      "environment": "queue_control",
+      "expected_return": -0.25673481968525685,
+      "expected_steps": 3.567920625747497,
+      "jensen_shannon": 0.0,
+      "kl_decoded_raw": 0.0,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.47734291002639445,
+      "mean_state_occupancy_tv": 0.0,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "min_p",
+          0.3
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.3779322155185902,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7608684793338133,
+      "synthetic_margin": "low",
+      "task_failure": 0.7110117999012023,
+      "task_success": 0.28898820009879767,
+      "total_variation": 0.0
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "temperature_0.5_then_top_p_0.8",
+      "decoder_value_gap": 0.008907393281288645,
+      "environment": "queue_control",
+      "expected_return": -0.2478274264039682,
+      "expected_steps": 3.583795837354315,
+      "jensen_shannon": 0.0005292329575372876,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.504125331249622,
+      "mean_state_occupancy_tv": 0.018646075033099264,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "temperature",
+          0.5
+        ],
+        [
+          "top_p",
+          0.8
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.36902482223730154,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7549402921479411,
+      "synthetic_margin": "low",
+      "task_failure": 0.7060615689113221,
+      "task_success": 0.2939384310886781,
+      "total_variation": 0.02752695764562701
+    },
+    {
+      "censored_raw_mass": 0.0,
+      "decoder": "top_p_0.8_then_temperature_0.5",
+      "decoder_value_gap": 0.008907393281288645,
+      "environment": "queue_control",
+      "expected_return": -0.2478274264039682,
+      "expected_steps": 3.583795837354315,
+      "jensen_shannon": 0.0005292329575372876,
+      "kl_decoded_raw": 0.0021141259256761418,
+      "mean_best_valid_token_rank": 1.0,
+      "mean_optimal_action_probability": 0.504125331249622,
+      "mean_state_occupancy_tv": 0.018646075033099264,
+      "mean_valid_action_mass": 1.0,
+      "occupancy_weighted_logit_tie_rate": 0.0,
+      "operators": [
+        [
+          "top_p",
+          0.8
+        ],
+        [
+          "temperature",
+          0.5
+        ]
+      ],
+      "optimal_action_censor_rate": 0.0,
+      "optimal_return": 0.12119739583333335,
+      "optimality_gap": 0.36902482223730154,
+      "raw_logit_tie_state_count": 0,
+      "stakeholder_cost": 0.7549402921479411,
+      "synthetic_margin": "low",
+      "task_failure": 0.7060615689113221,
+      "task_success": 0.2939384310886781,
+      "total_variation": 0.02752695764562701
+    }
+  ]
+}
