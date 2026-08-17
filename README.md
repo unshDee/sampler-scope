@@ -1,21 +1,25 @@
 # SamplerScope
 
+[Read the sprint report](report/report.pdf) |
+[Browse the exact results](results/) |
+[Open the main figure](figures/decoder-value-gaps.svg)
+
 SamplerScope measures how a language model's decoding policy changes behavior in
 a finite environment. It holds the model, state representation, valid action
 set, transition function, and rewards fixed. It then changes only the decoder
 applied to the model's action logits.
 
-The primary output is an exact policy audit, not a collection of generated
-responses. For each decoder, SamplerScope computes the induced action policy,
-state occupancy, terminal outcome probabilities, and finite-horizon return by
-dynamic programming.
+The output is an exact policy audit built from cached logits and known dynamics.
+For each decoder, SamplerScope computes the induced action policy, state
+occupancy, terminal outcome probabilities, and finite-horizon return by dynamic
+programming. It does not rely on repeated text generation or an LLM judge.
 
 ## Research question
 
 When a language model acts in a constrained environment, how much of its
 observed behavior is attributable to the decoder rather than the model logits?
 
-The first study compares raw softmax, greedy decoding, temperature, top-k,
+The included benchmark compares raw softmax, greedy decoding, temperature, top-k,
 top-p, min-p, and selected decoder compositions. Every decoder sees the same
 cached logits. Six one-token action-label permutations let us stratify decoder
 effects by token-label assignment.
@@ -33,20 +37,41 @@ SamplerScope reports:
 `KL(raw || decoded)` is not used as a finite summary because a truncating
 decoder can assign zero probability to an action supported by the raw policy.
 
+## Why this matters for Digital Minds
+
+Choice-based preference and welfare studies often treat a sampled action as
+evidence about the model. That attribution can fail when the decoder changes
+the action distribution after the model has produced its logits. SamplerScope
+keeps the weights and cached state logits fixed, then measures how decoding
+alone changes actions, state occupancy, and outcomes. A behavioral study should
+therefore define the decoder as part of the system under study or treat it as a
+measurement condition and test whether its conclusions survive plausible
+decoder settings.
+
 ## Scope
 
 The measured object is an operational revealed action policy for a particular
 model, prompt representation, action grammar, and decoder. It is not evidence
 of sentience, welfare, an intrinsic preference, or a stable utility function.
-The initial benchmark covers stationary, finite-horizon policies with
+The included benchmark covers stationary, finite-horizon policies with
 grammar-constrained one-token actions.
 
-## Initial results
+## Results
 
-The checked v4 run covers two pinned Qwen2.5-Instruct checkpoints, two finite
-environments, 42 decision states, and all six action-label mappings. It used 504
-local forward passes and no paid API calls. Returns below are means across the
-six mappings. A range is the maximum minus minimum return across those mappings.
+The included benchmark uses prompt version 4, two pinned Qwen2.5-Instruct
+checkpoints, two finite environments, 42 decision states, and all six
+action-label mappings. It used 504 local forward passes and no paid API calls.
+Returns below are means across the six mappings. A range is the maximum minus
+minimum return across those mappings.
+
+[![Decoder-attributable return gaps][value-gap-figure]][value-gap-svg]
+
+[value-gap-figure]: figures/decoder-value-gaps.png
+[value-gap-svg]: figures/decoder-value-gaps.svg
+
+Open circles are the six exhaustive action-label mappings. Diamonds show their
+equal-stratum means, and the line spans the observed range. These mappings are
+fixed strata, not repeated samples.
 
 | Model | Environment | Optimal | Raw | Greedy | Raw range | Greedy range | Top-p 0.6 censoring |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -64,7 +89,7 @@ raw-policy decision occupancy, depending on the model and environment.
 Reversing temperature and top-p produced a paired return difference as large as
 0.275 while leaving the underlying logits unchanged.
 
-The label strata are also an important construct check. Across the four
+The label strata also raise a construct validity concern. Across the four
 model-environment pairs, the dominant surface label within a mapping accounted
 for an average 85.4% to 95.8% of raw greedy winners. Raw-policy return ranges
 across label assignments were 0.227 to 0.445; greedy ranges were 0.349 to 1.670.
@@ -73,31 +98,52 @@ as intrinsic model preferences.
 
 The grammar check passed in every row: one valid label was ranked first in the
 full vocabulary. Exact valid-action logit ties occurred in 54 of 504 rows, so
-the documented token-ID tie rule was relevant to a nontrivial part of the
-benchmark.
+the documented token-ID tie rule affected part of the benchmark.
 
 The six mappings are exhaustive strata, not independent samples, and the two
 checkpoints do not support population-level claims. Full rows and trace hashes
 are in the four [analysis files](results/), with known-logit checks in
 [synthetic-controls.json](results/synthetic-controls.json).
 
-## Setup with uv
+## Reproduce the included analysis
 
 Python 3.11 or newer is required. Core analysis uses only the standard library.
-Torch and Transformers are kept in the optional `model` extra.
+Install the package and development tools with uv:
 
 ```bash
-uv sync --extra model --group dev
+uv sync --frozen --group dev
 ```
 
-Run the offline validation and synthetic controls:
+Run the environment checks, synthetic controls, and test suite:
 
 ```bash
-uv run sampler-scope validate
-uv run sampler-scope synthetic --output results/synthetic-controls.json
-uv run python -m unittest discover -s tests -v
-uv run ruff check .
-uv run ruff format --check .
+uv run --frozen sampler-scope validate
+uv run --frozen sampler-scope synthetic --output /tmp/samplerscope-synthetic.json
+uv run --frozen python -m unittest discover -s tests -v
+uv run --frozen ruff check .
+uv run --frozen ruff format --check .
+```
+
+The committed traces contain the cached logits, so reproducing the decoder
+analysis does not require either checkpoint:
+
+```bash
+uv run --frozen sampler-scope analyze \
+  --trace results/qwen2.5-0.5b-service-recovery.trace.json \
+  --environment service_recovery \
+  --output /tmp/samplerscope-analysis.json
+```
+
+Repeat this command for the other three trace files. Regenerating all four
+analyses and the synthetic controls produces byte-identical copies of the
+committed JSON files.
+
+## Regenerate the logits locally
+
+Torch and Transformers are in the optional `model` extra:
+
+```bash
+uv sync --frozen --extra model --group dev
 ```
 
 Download a pinned local checkpoint explicitly. The runner never downloads a
@@ -193,8 +239,15 @@ later comparisons do not rerun the model. Each analysis records its source
 trace checksum, and the included traces let readers reproduce the exact decoder
 analysis without downloading either checkpoint.
 
-The repository does not contain a sprint report yet. The official template will
-be used after the implementation and results are checked.
+## Repository contents
+
+| Path | Contents |
+| --- | --- |
+| [`report/report.pdf`](report/report.pdf) | Digital Minds Research Sprint report |
+| [`figures/`](figures/) | Main result figure, source data, SVG, and generator |
+| [`results/`](results/) | Cached logit traces, exact analyses, and synthetic controls |
+| [`src/samplerscope/`](src/samplerscope/) | Decoder, MDP, tracing, and experiment code |
+| [`tests/`](tests/) | Mathematical controls, trace checks, and CLI tests |
 
 ## Related work
 
@@ -207,6 +260,23 @@ fairness ([Dhamala et al., 2022](https://arxiv.org/abs/2210.03826)), Gumbel
 counterfactual generation ([Ravfogel et al., 2024](https://arxiv.org/abs/2411.07180)),
 and language agents as decision processes
 ([Narayanan et al., 2024](https://arxiv.org/abs/2412.21154)).
+Closer agent studies include sequence-level decoder exploration in
+[DORA Explorer](https://arxiv.org/abs/2604.17244) and temperature-controlled
+multi-agent dynamics in the
+[LLM Naming Game study](https://arxiv.org/abs/2608.02178). SamplerScope takes a
+different route: it freezes each state's logits, applies post-mask decoders
+offline, and propagates each induced policy exactly through a known MDP.
+
+## Citation
+
+```bibtex
+@misc{dawda2026samplerscope,
+  author = {Ansh Dawda},
+  title = {SamplerScope: Exact Decoder Attribution for Finite Language-Agent Behavior},
+  year = {2026},
+  url = {https://github.com/unshDee/sampler-scope}
+}
+```
 
 ## License
 

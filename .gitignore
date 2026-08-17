@@ -11,3 +11,6 @@ dist/
 .env.*
 models/
 *.jsonl
+
+# Keep the editable report draft local. The submitted PDF is public.
+report/*.docx
